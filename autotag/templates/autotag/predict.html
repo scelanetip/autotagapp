@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</head>
+<body>
+    <div>
+        <h1>Gcloud results</h1>
+    </div>
+
+    <div>
+            <h2>IMAGE</h2>
+
+            <img  id="imgpredict"  src="{% static image %}" alt="" />
+
+    <div>
+        <h2>TAGS</h2>
+        <p>Aquí los tags</p>
+    </div>
+</body>
+</html>
