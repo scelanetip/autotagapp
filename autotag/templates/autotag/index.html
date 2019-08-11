@@ -1,8 +1,10 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Autotag App</title>
+    <script src="{% static 'js/main.js' %}"></script>
 </head>
 <body>
         <div>
@@ -10,18 +12,22 @@
         </div>
 
         <div>
-            <h2><a href="">IMAGE</a></h2>
-            <p> Aquí despliego la imagen</p>
+            <label for="files"> <a id="home-open-image" >open image </a></label>
+                <input id="files" style="visibility:hidden;" type="file" onchange="previewFile()">
         </div>
 
         <div>
-            <h2><a href="">button</a></h2>
-            <p> boton para subir imagen</p>
+            <h2>IMAGE</h2>
+            <img  id="imgedit"  src="" alt="Upload whatever image you want " style=" max-width:50%;
+  max-height:50%;" />
+
         </div>
 
+
+
         <div>
-            <h2><a href="">TAGS</a></h2>
-            <p>Aquí los taggs</p>
+            <h2>TAGS</h2>
+            <p>Aquí los tags</p>
         </div>
     </body>
 </html>
