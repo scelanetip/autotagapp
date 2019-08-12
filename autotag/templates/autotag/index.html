@@ -13,24 +13,33 @@
         </div>
 
         <div>
-<!--            <label for="files"> <a id="home-open-image" >open image </a></label>-->
 
             <form action="">
                 <input type="text" id="input1"/>
                 <input type="file" id="fileSelect" onchange="previewFile()" />
                 <button type="button" onclick="doSubmit()">Submit</button>
             </form>
+
         </div>
 
+        <h2>IMAGE</h2>
+
         <div>
-            <h2>IMAGE</h2>
-            <!--                <input id="files" style="visibility:hidden;" type="file" onchange="previewFile()">-->
+
             <img  id="imgedit"  src="" alt="Upload whatever image you want " style=" max-width:50%; max-height:50%;" />
 
         </div>
+
         <h2>TAGS</h2>
+
+        <div id="wait" style="display:none;width:69px;height:89px;position:absolute;top:50%;left:50%;padding:2px;">
+                <img src="{% static 'ajax-loader.gif' %}" width="64" height="64" /><br>Waiting for Google..</div>
+
         <div id="labels">
             <p id = "par"> Aquí aparecerán los tags</p>
+
         </div>
+
+
     </body>
 </html>

@@ -15,10 +15,8 @@ def index(request):
 
 @csrf_exempt
 def predict(request):
-    #img_data = str(request.FILES['file'])
-    img_data = request.FILES['file'].read()
 
+    img_data = request.FILES['file'].read()
     labels = autotag(img_data)
 
-    #return render(request, 'autotag/predict.html', {'labels': labels})
     return JsonResponse({'labels': labels})
